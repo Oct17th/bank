@@ -1,4 +1,4 @@
-package com.bank.util;
+package com.bank.exception;
 
 /**
  * 取款时超出余额时抛出异常

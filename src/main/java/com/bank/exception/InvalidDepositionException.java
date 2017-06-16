@@ -1,4 +1,4 @@
-package com.bank.util;
+package com.bank.exception;
 
 /**
  * 存款为负数时抛出异常
