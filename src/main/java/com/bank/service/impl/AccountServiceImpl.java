@@ -1,13 +1,12 @@
 package com.bank.service.impl;
 
+import com.bank.exception.AccountOverDrawnException;
+import com.bank.exception.InvalidDepositionException;
+import com.bank.exception.PropertiesNotFoundException;
 import com.bank.service.AccountService;
+import com.bank.util.PropertiesUtil;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.Properties;
-import java.util.Random;
+import java.io.File;
 
 /**
  * 账户业务实现
@@ -15,38 +14,46 @@ import java.util.Random;
  * @author YiJie  2017/6/15
  **/
 public class AccountServiceImpl implements AccountService {
-    Properties bank = new Properties();//k不可重复，重复写入新v。//TODO 无序遍历？
+    String path;
+    PropertiesUtil propertiesUtil;
 
-    {//Properties测试
-        try {
-            URL propURL = getClass().getResource("../../model/Bank.properties");
-            InputStream properties = propURL.openStream();//getResourceAsStream(path) == getResource(path).openStream()
-//            InputStream properties = getClass().getResourceAsStream("/Bank.properties");//path不以'/'开头时，我们就能获取与当前类所在的路径相同的资源文件，而以'/'开头时可以获取ClassPath根下任意路径的资源 //TODO 此方法‘/’开头，从classpath下开始找文件，否则从classpath目录下的（指定）包内开始找文件
-//            InputStream properties = getClass().getClassLoader().getResourceAsStream("Bank.properties");//class.getResource("/") == class.getClassLoader().getResource("")
-//            InputStream properties = ClassLoader.getSystemResourceAsStream("Bank.properties");//
-            bank.load(properties);//properties文件为空且未加载到classpath中时，会抛NPE
-            bank.setProperty("randomTest"+String.valueOf(new Random().nextInt(100)), "3");
-            FileOutputStream storeTo = new FileOutputStream(propURL.getFile(), true);//true表示追加文件
-            bank.store(storeTo, "class.getResource(\"../../model/Bank.properties\") + load");//TODO 用绝对路径无法写入源文件，写入的是classpath下的文件
-            System.out.println("bank = " + propURL);
-        } catch (IOException e) {
-            e.printStackTrace();
+    public AccountServiceImpl() throws PropertiesNotFoundException {
+        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
+        propertiesUtil = new PropertiesUtil(path);
+    }
+
+    /**
+     * @param name 用户名
+     * @return 余额 //TODO 暂时不考虑没开户的情况（即Bank.properties文件里没有moneny键，或money键的值为空或""），若properties取money值为空，返回账户余额为0
+     */
+    public double inquiry(String name) {
+        String money = propertiesUtil.get("money");
+        return null == money || ("").equals(money) ? 0 : Double.parseDouble(money);
+    }
+
+    public double deposit(double amount) throws InvalidDepositionException {
+        if(amount<0){//存入金额为负数
+            throw new InvalidDepositionException(amount);
         }
+        String key = "money";
+        double balance = inquiry("user");//一定要先用inquiry取，因为set前money值可能各种为空，inquiry方法里做了判空处理
+        propertiesUtil.set(key, String.valueOf(balance + amount));
+        return Double.parseDouble(propertiesUtil.get(key));
     }
 
-    public void inquiry(String name) {
-
+    public double withdrawals(double amount) throws AccountOverDrawnException {//TODO 参数里应该有用户名
+        String key = "money";
+        double balance = inquiry("user");//一定要先用inquiry取，因为set前money值可能各种为空，inquiry方法里做了判空处理
+        if(balance - amount<0){//判断取款金额是否超出余额
+            throw new AccountOverDrawnException(amount);
+        }
+        propertiesUtil.set(key, String.valueOf(balance - amount));
+        return Double.parseDouble(propertiesUtil.get(key));
     }
 
-    public void withdrawals(double amount) {
+    public double transfer(String from, String to) {
 
+        return 0;
     }
 
-    public void deposit(double amount) {
-
-    }
-
-    public void transfer(String from, String to) {
-
-    }
 }

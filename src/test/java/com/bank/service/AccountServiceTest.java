@@ -1,5 +1,6 @@
 package com.bank.service;
 
+import com.bank.exception.PropertiesNotFoundException;
 import com.bank.service.impl.AccountServiceImpl;
 
 /**
@@ -8,18 +9,23 @@ import com.bank.service.impl.AccountServiceImpl;
 public class AccountServiceTest {
     AccountService accountService = new AccountServiceImpl();
 
-    @org.junit.Test
-    public void inquiry() throws Exception {
+    public AccountServiceTest() throws PropertiesNotFoundException {
     }
 
     @org.junit.Test
-    public void withdrawals() throws Exception {
-
+    public void inquiry() throws Exception {
+        System.out.println(accountService.inquiry(""));
     }
 
     @org.junit.Test
     public void deposit() throws Exception {
+        System.out.println(accountService.deposit(20));
+    }
 
+    @org.junit.Test
+    public void withdrawals() throws Exception {
+        accountService.deposit(20);
+        System.out.println(accountService.withdrawals(12));
     }
 
     @org.junit.Test

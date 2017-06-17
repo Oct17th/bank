@@ -5,5 +5,8 @@ package com.bank.exception;
  *
  * @author YiJie  2017/6/15
  **/
-public class InvalidDepositionException {
+public class InvalidDepositionException extends Exception{
+    public InvalidDepositionException(double amount) {
+        super(String.valueOf(amount));
+    }
 }
