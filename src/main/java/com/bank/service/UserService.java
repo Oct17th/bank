@@ -1,5 +1,7 @@
 package com.bank.service;
 
+import com.bank.exception.UserException;
+
 /**
  * 用户业务接口
  *
@@ -13,7 +15,7 @@ public interface UserService {
      * @param name     用户名
      * @param password 密码
      */
-    public void register(String name, String password);
+    public void register(String name, String password) throws UserException;
 
     /**
      * 登录
@@ -21,12 +23,10 @@ public interface UserService {
      * @param name     用户名
      * @param password 密码
      */
-    public void login(String name, String password);
+    public void login(String name, String password) throws UserException;
 
     /**
      * 退出系统
-     *
-     * @param name 用户名
      */
     public void exitSystem(String name);
 

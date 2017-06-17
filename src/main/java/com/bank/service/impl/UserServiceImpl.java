@@ -1,6 +1,11 @@
 package com.bank.service.impl;
 
+import com.bank.exception.PropertiesNotFoundException;
+import com.bank.exception.UserException;
 import com.bank.service.UserService;
+import com.bank.util.PropertiesUtil;
+
+import java.io.File;
 
 /**
  * 用户业务实现
@@ -8,15 +13,51 @@ import com.bank.service.UserService;
  * @author YiJie  2017/6/15
  **/
 public class UserServiceImpl implements UserService {
-    public void register(String name, String password) {
+    String path;
+    PropertiesUtil propertiesUtil;
 
+    private UserServiceImpl() throws PropertiesNotFoundException {
+        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
+        propertiesUtil = new PropertiesUtil(path);
+    }
+    public UserServiceImpl(PropertiesUtil propertiesUtil){
+        this.propertiesUtil = propertiesUtil;
     }
 
-    public void login(String name, String password) {
+    public void register(String name, String password) throws UserException {
+        //TODO 输入参数合法性不应该在业务里判断
+        if (name == null || "".equals(name)) {//TODO 可以不判断null值情况，name和password由Scanner.next()读入，不可能为null
+            throw new UserException("用户名不能为空！");
+        }
+        if (password == null || "".equals(password)) {
+            throw new UserException("密码不能为空！");
+        }
+        if (propertiesUtil.get(name) != null) {//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
+            throw new UserException("该用户已注册！");
+        }
+        propertiesUtil.set(name, password);
+        propertiesUtil.set(name + ".account", String.valueOf(0));
+    }
 
+    public void login(String name, String password) throws UserException {
+        //TODO 输入参数合法性不应该在业务里判断
+        if (name == null || "".equals(name)) {
+            throw new UserException("用户名不能为空！");
+        }
+        if (password == null || "".equals(password)) {
+            throw new UserException("密码不能为空！");
+        }
+
+        String pwd = propertiesUtil.get(name);//此处默认匹配了name
+        if (pwd == null) {//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
+            throw new UserException("不存在该用户！");
+        }
+        if (!pwd.equals(password)) {
+            throw new UserException("密码错误！");
+        }
     }
 
     public void exitSystem(String name) {
-
+        System.exit(0);
     }
 }

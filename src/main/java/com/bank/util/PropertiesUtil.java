@@ -34,6 +34,7 @@ public class PropertiesUtil {
      * @throws PropertiesNotFoundException 配置文件路径错误，没有找到该配置文件
      */
     public PropertiesUtil(String path) throws PropertiesNotFoundException {
+//        this(path,false);
         //判断path文件是否存在，是否为配置文件
         if (!(path.endsWith(".properties") && new File(path).exists())) {
             throw new PropertiesNotFoundException(path);
@@ -78,7 +79,7 @@ public class PropertiesUtil {
      */
     public void store(String comments) {
         try {
-            FileOutputStream storeTo = new FileOutputStream(path, true);//true表示追加文件
+            FileOutputStream storeTo = new FileOutputStream(path, false);//true表示追加文件
             properties.store(storeTo, comments);
         } catch (IOException e) {//构造函数里对path设值做了判断，程序不会出现该异常，故捕获不处理
             e.printStackTrace();
