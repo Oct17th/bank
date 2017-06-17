@@ -52,7 +52,7 @@ public class AccountServiceImpl implements AccountService {
      * @throws InvalidAmountException 存入金额为负数
      */
     public double deposit(String userName, double amount) throws InvalidAmountException {
-        if (amount < 0) {//存入金额为负数
+        if (amount <= 0) {//存入金额为负数
             throw new InvalidAmountException(amount);
         }
 //        checkUser(user);//传入的用户名是系统保存的登录用户数据，不会为空，相当于已做校验
@@ -72,7 +72,7 @@ public class AccountServiceImpl implements AccountService {
      * @throw AccountOverDrawnException 账户余额不足
      */
     public double withdrawals(String userName, double amount) throws InvalidAmountException, AccountOverDrawnException {
-        if (amount < 0) {//取款金额为负数
+        if (amount <= 0) {//取款金额为负数
             throw new InvalidAmountException(amount);
         }
 //        checkUser(user);//传入的用户名是系统保存的登录用户数据，不会为空，相当于已做校验
