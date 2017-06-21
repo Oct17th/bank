@@ -46,8 +46,8 @@ public class AccountServiceImpl implements AccountService {
     /**
      * 存款
      *
-     * @param userName   用户名
-     * @param amount 金额
+     * @param userName 用户名
+     * @param amount   金额
      * @return 账户余额
      * @throws InvalidAmountException 存入金额为负数
      */
@@ -65,8 +65,8 @@ public class AccountServiceImpl implements AccountService {
     /**
      * 取款
      *
-     * @param userName   用户名
-     * @param amount 金额
+     * @param userName 用户名
+     * @param amount   金额
      * @return 账户余额
      * @throw InvalidAmountException 取款金额为负数
      * @throw AccountOverDrawnException 账户余额不足
@@ -109,11 +109,12 @@ public class AccountServiceImpl implements AccountService {
      * @param userName
      * @throws UserException
      */
-    private void checkUser(String userName) throws UserException {
+    public void checkUser(String userName) throws UserException {
         if (propertiesUtil.get(userName) == null) {
-            throw new UserException("不存在用户" + userName+"！");
+            throw new UserException("不存在用户" + userName + "！");
         }
     }
+
     /**
      * 校验转账用户是否合法
      * 1.转账人与收款人判空
@@ -123,10 +124,10 @@ public class AccountServiceImpl implements AccountService {
      * @param to
      * @throws UserException
      */
-    private void checkTransferUser(String from,String to) throws UserException {
+    private void checkTransferUser(String from, String to) throws UserException {
 //        checkUser(from);//传入的用户名是系统保存的登录用户数据，不会为空，相当于已做校验
         checkUser(to);
-        if(from.equals(to)){
+        if (from.equals(to)) {
             throw new UserException("转账人与收款人相同！");
         }
     }

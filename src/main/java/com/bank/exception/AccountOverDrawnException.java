@@ -5,7 +5,7 @@ package com.bank.exception;
  *
  * @author YiJie  2017/6/15
  **/
-public class AccountOverDrawnException extends Exception{
+public class AccountOverDrawnException extends Exception {
     public AccountOverDrawnException(double amount) {
         super(String.valueOf(amount));
     }

@@ -28,6 +28,13 @@ public interface UserService {
     /**
      * 退出系统
      */
-    public void exitSystem(String name);
+    public void exitSystem();
 
+    /**
+     * 校验用户是否存在
+     *
+     * @param userName
+     * @throws UserException
+     */
+    public void checkUser(String userName) throws UserException;
 }

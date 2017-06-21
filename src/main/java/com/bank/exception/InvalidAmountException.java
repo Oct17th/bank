@@ -5,7 +5,7 @@ package com.bank.exception;
  *
  * @author YiJie  2017/6/15
  **/
-public class InvalidAmountException extends Exception{
+public class InvalidAmountException extends Exception {
     public InvalidAmountException(double amount) {
         super(String.valueOf(amount));
     }

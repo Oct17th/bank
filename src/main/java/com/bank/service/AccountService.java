@@ -9,7 +9,7 @@ import com.bank.exception.UserException;
  *
  * @author YiJie  2017/6/15
  **/
-public interface AccountService{
+public interface AccountService {
 
 
     /**
@@ -23,29 +23,36 @@ public interface AccountService{
     /**
      * 取款
      *
-     * @param user 用户名
+     * @param user   用户名
      * @param amount 金额
      * @return 账户余额
      */
-    public double withdrawals(String user,double amount) throws AccountOverDrawnException, InvalidAmountException;
+    public double withdrawals(String user, double amount) throws AccountOverDrawnException, InvalidAmountException;
 
     /**
      * 存款
      *
-     * @param user 用户名
+     * @param user   用户名
      * @param amount 金额
      * @return 账户余额
      */
-    public double deposit(String user,double amount) throws InvalidAmountException;
+    public double deposit(String user, double amount) throws InvalidAmountException;
 
     /**
      * 转账
      *
-     * @param from 转账人
-     * @param to   收款人
+     * @param from   转账人
+     * @param to     收款人
      * @param amount 转账金额
      * @return 转账人账户余额
      */
-    public double transfer(String from, String to,double amount) throws InvalidAmountException, AccountOverDrawnException, UserException;
+    public double transfer(String from, String to, double amount) throws InvalidAmountException, AccountOverDrawnException, UserException;
 
+    /**
+     * 校验用户是否存在
+     *
+     * @param userName
+     * @throws UserException
+     */
+    public void checkUser(String userName) throws UserException;
 }

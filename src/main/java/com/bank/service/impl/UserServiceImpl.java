@@ -20,7 +20,8 @@ public class UserServiceImpl implements UserService {
         path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
         propertiesUtil = new PropertiesUtil(path);
     }
-    public UserServiceImpl(PropertiesUtil propertiesUtil){
+
+    public UserServiceImpl(PropertiesUtil propertiesUtil) {
         this.propertiesUtil = propertiesUtil;
     }
 
@@ -32,9 +33,8 @@ public class UserServiceImpl implements UserService {
         if (password == null || "".equals(password)) {
             throw new UserException("密码不能为空！");
         }
-        if (propertiesUtil.get(name) != null) {//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
-            throw new UserException("该用户已注册！");
-        }
+
+//        checkUser(name);//TODO 外部已做判断
         propertiesUtil.set(name, password);
         propertiesUtil.set(name + ".account", String.valueOf(0));
     }
@@ -48,16 +48,27 @@ public class UserServiceImpl implements UserService {
             throw new UserException("密码不能为空！");
         }
 
-        String pwd = propertiesUtil.get(name);//此处默认匹配了name
-        if (pwd == null) {//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
-            throw new UserException("不存在该用户！");
-        }
+        checkUser(name);//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
+        String pwd = propertiesUtil.get(name);
         if (!pwd.equals(password)) {
             throw new UserException("密码错误！");
         }
     }
 
-    public void exitSystem(String name) {
+    public void exitSystem() {
         System.exit(0);
     }
+
+    /**
+     * 校验用户是否存在
+     *
+     * @param userName
+     * @throws UserException
+     */
+    public void checkUser(String userName) throws UserException {
+        if (propertiesUtil.get(userName) == null) {
+            throw new UserException("不存在用户" + userName + "！");
+        }
+    }
+
 }
