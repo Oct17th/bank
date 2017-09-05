@@ -2,7 +2,7 @@ package com.bank.service;
 
 import com.bank.exception.PropertiesNotFoundException;
 import com.bank.service.impl.AccountServiceImpl;
-import com.bank.util.PropertiesUtil;
+import com.bank.dao.util.PropertiesUtil;
 
 /**
  * @author YiJie  2017/6/15

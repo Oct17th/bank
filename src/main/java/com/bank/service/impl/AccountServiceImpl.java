@@ -5,7 +5,7 @@ import com.bank.exception.InvalidAmountException;
 import com.bank.exception.PropertiesNotFoundException;
 import com.bank.exception.UserException;
 import com.bank.service.AccountService;
-import com.bank.util.PropertiesUtil;
+import com.bank.dao.util.PropertiesUtil;
 
 import java.io.File;
 

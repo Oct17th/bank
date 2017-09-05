@@ -32,7 +32,7 @@ import java.security.NoSuchAlgorithmException;
  * 5.强抗碰撞：想找到两个不同的数据，使它们具有相同的MD5值，是非常困难的。<br/>
  * <p>
  * 个人理解：<br/>
- * MD5算法是对密码进行非随机的散列处理得到密文，处理是单向不可逆的，即密文不可解密，不可通过密文拿到原数据。
+ * MD5算法是对密码进行非随机的散列处理得到密文，处理是单向不可逆的，即密文不可逆运算解密，不可通过密文拿到原数据。
  * 进行信息比对时，是将测试数据MD5加密后的密文，同原数据MD5加密后的密文进行比对，这样一个正向比较的方式。
  * 而非将密文解密出原数据，让测试数据同原数据比对，这样一种逆向的比较方式。
  * 即MD5的比对方式，是密文与密文的比对，非而测试数据与原数据的比对。此方式也保证了使用者只能操作密文，操作全程都无法通过密文得到原数据。
@@ -46,7 +46,7 @@ public class MD5Util {
      *
      * @param text               测试数据
      * @param originalCiphertext 原数据密文
-     * @return
+     * @return 比对结果
      */
     public static boolean verify(String text, String originalCiphertext) {
         String ciphertext = originalCiphertext.length() == 32 ? getMD5by16bit(text) : getMD5by16bit(text);
@@ -75,13 +75,20 @@ public class MD5Util {
         long j;
         String k;
         for (int i = 0; i < bytes.length; i++) {//断言bytes.length=8
-            //& 0xff位运算。此操作等同于if(byte[i]<0)byte[i]+=256;)。因为byte是有符号位的，此操作是将有符号位byte转为无符号位byte
+
+            // &0xff位运算。因为byte是有符号位的，此操作是将有符号位byte转为无符号位byte。
+            // 此操作等同于if(byte[i]<0)byte[i]+=256;)
             j = Long.valueOf(bytes[i] & 0xff);
-            //一个坑！MD5加密将128位的byte数组（8*8bit）转为32位16进制数时，必须一个一个字节的转(1字节=8位二进制数 转成 2位16进制数)
-            //不能将byte数组全部拼接后再做进制转换，因为拼接结果为128位，太长，无法用long存储并做计算
+
+            // 进制转换。这里是一个坑！MD5加密将128位的byte数组（8*8bit）转为32位16进制数时，必须一个一个字节的转，即每8位(1字节)2进制数转成2位16进制数
+            // 注意不能将byte数组全部拼接成一个长串后，再做进制转换，因为拼接结果为128位，太长，无法用long存储并做计算
             k = Long.toHexString(j);
-            //此操作等同于if(j<16){k="0"+k;或sb.append(0)}
+
+            // 补0操作。将每8位2进制数转成2位16进制数时，如遇到的8位2进制数是数值小于16的数，转换结果会为1位的16进制数，故需要补0操作。
+            // 此操作等同于if(j<16){k="0"+k;或sb.append(0)}
             k = k.length() < 2 ? "0" + k : k;
+
+            // 拼接操作。把数组每1字节换成16进制后的字符串连接起来
             sb.append(k);
         }
         return new String(sb);
@@ -94,13 +101,20 @@ public class MD5Util {
      * @return 保存128位MD5加密密文的长度为8的byte数组
      */
     private static byte[] encrypt(String text) {
-        MessageDigest md = null;
+        byte[] buff = null;
         try {
-            md = MessageDigest.getInstance("MD5");
+            //1 调用java.securityMessa包下的MessageDigest类，创建一个提供信息摘要算法的对象，初始化为md5算法对象
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            //2 将消息变成byte数组
+            byte[] input = text.getBytes();
+
+            //3 计算后获得字节数组,这就是那128位了
+            buff = md.digest(input);
+
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        byte[] bytes = md.digest(text.getBytes());
-        return bytes;
+        return buff;
     }
 }

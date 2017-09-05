@@ -3,7 +3,7 @@ package com.bank.service.impl;
 import com.bank.exception.PropertiesNotFoundException;
 import com.bank.exception.UserException;
 import com.bank.service.UserService;
-import com.bank.util.PropertiesUtil;
+import com.bank.dao.util.PropertiesUtil;
 
 import java.io.File;
 
