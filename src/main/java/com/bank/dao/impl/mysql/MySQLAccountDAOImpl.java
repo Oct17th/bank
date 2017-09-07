@@ -11,7 +11,7 @@ public class MySQLAccountDAOImpl implements AccountDAO{
         return 0;
     }
 
-    public int updateAccount(Account old, Account account) {
+    public int updateAccount(Account account) {
         return 0;
     }
 

@@ -23,9 +23,12 @@ public class PropertiesUtil {
     private OutputStream storeTo;
 
     public PropertiesUtil() throws PropertiesNotFoundException {
-        new PropertiesUtil(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties");
+        this(System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties");
     }
 
+    public static void main(String[] args) {
+
+    }
     /**
      * 构造函数里装入配置文件
      *
@@ -103,15 +106,17 @@ public class PropertiesUtil {
      */
     public void store(String comments) {
         try {
-            if (storeTo == null) {
+//            if (storeTo == null) {
+                // 为保证覆盖写入，而不是追加写入，每次都要新开一个输出流
                 storeTo = new FileOutputStream(path, false);//true表示追加文件
-            }
+//            }
             properties.store(storeTo, comments);
         } catch (IOException e) {//构造函数里对path设值做了判断，程序不会出现该异常，故捕获不处理
             e.printStackTrace();
         } finally {
             try {
                 storeTo.close();
+                storeTo = null;
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -130,6 +135,8 @@ public class PropertiesUtil {
             load();
         }
         properties.setProperty(key, value);
+        store(null);
+//        load();
         return this.properties;
     }
 
@@ -158,6 +165,9 @@ public class PropertiesUtil {
         if (properties == null) {
             load();
         }
+
+        store(null);
+//        load();
         return (String) properties.remove(key);
     }
 }

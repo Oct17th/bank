@@ -24,10 +24,10 @@ public class PropAccountDAOImpl implements AccountDAO {
 
     public int addAccount(Account account) {
         if (propertiesUtil.get(account.getName()) != null) {
-            propertiesUtil.set(account.getName() + ".account", String.valueOf(account.getBalance()));
-            return 1;
+            return 0;
         }
-        return 0;
+        propertiesUtil.set(account.getName() + ".account", String.valueOf(account.getBalance()));
+        return 1;
     }
 
     public int updateAccount(Account account) {
@@ -49,9 +49,7 @@ public class PropAccountDAOImpl implements AccountDAO {
     public Account queryAccount(Account account) {
         if (propertiesUtil.get(account.getName()) != null && propertiesUtil.get(account.getName() + ".account") != null) {
             Account result = new Account();
-            User user = new User();
-            user.setPassword(propertiesUtil.get(account.getName()));
-            user.setName(account.getName());
+            User user = new User(account.getName(), propertiesUtil.get(account.getName()));
             account.setUser(user);
             account.setBalance(Float.parseFloat(propertiesUtil.get(account.getName() + ".account")));
             return account;

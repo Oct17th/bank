@@ -5,8 +5,6 @@ import com.bank.dao.util.PropertiesUtil;
 import com.bank.exception.PropertiesNotFoundException;
 import com.bank.po.User;
 
-import java.io.File;
-
 /**
  * 利用properties文件存储实现用户接口
  *
@@ -28,14 +26,17 @@ public class PropUserDAOImpl implements UserDAO {
         }
     }
 
+    @Override
     public int addUser(User user) {
         if (queryUser(user) != null) {
-            propertiesUtil.set(user.getName(), user.getPassword());
-            return 1;
+            return 0;//该用户已存在
         }
-        return 0;//该用户已存在
+        propertiesUtil.set(user.getName(), user.getPassword());
+        propertiesUtil.set(user.getName() + ".account", "0.0");//TODO 此操作不符合高内聚低耦合原则
+        return 1;
     }
 
+    @Override
     public int updateUser(User old, User user) {
         if (queryUser(old) == null || queryUser(user) != null || old.equals(user)) {
             propertiesUtil.remove(old.getName());
@@ -45,6 +46,7 @@ public class PropUserDAOImpl implements UserDAO {
         return 0;//旧用户不存在，新用户名已存在，旧用户等于新用户
     }
 
+    @Override
     public int deleteUser(User user) {
         if (queryUser(user) != null) {
             propertiesUtil.remove(user.getName());
@@ -53,12 +55,11 @@ public class PropUserDAOImpl implements UserDAO {
         return 0;
     }
 
+    @Override
     public User queryUser(User user) {
         String password = propertiesUtil.get(user.getName());
         if (password != null) {
-            User result = new User();
-            user.setName(user.getName());
-            user.setPassword(password);
+            User result = new User(user.getName(), password);
             return result;
         }
         return null;

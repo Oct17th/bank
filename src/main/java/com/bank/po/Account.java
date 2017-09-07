@@ -13,7 +13,24 @@ public class Account {
     /**
      * 账户余额
      */
-    float balance;
+    Float balance;
+
+    public Account() {
+    }
+
+    public Account(String name) {
+        this.user = new User(name);
+    }
+
+    public Account(String name, Float balance) {
+        this.user = new User(name);
+        this.balance = balance;
+    }
+
+    public Account(User user, Float balance) {
+        this.user = user;
+        this.balance = balance;
+    }
 
     public String getName() {
         return user.getName();
@@ -38,7 +55,7 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(float balance) {
+    public void setBalance(Float balance) {
         this.balance = balance;
     }
 }

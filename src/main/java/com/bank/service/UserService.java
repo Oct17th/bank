@@ -26,9 +26,9 @@ public interface UserService {
     public void login(String name, String password) throws UserException;
 
     /**
-     * 退出系统
+     * 注销
      */
-    public void exitSystem();
+    public void logout();
 
     /**
      * 校验用户是否存在

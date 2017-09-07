@@ -18,7 +18,7 @@ public interface AccountService {
      * @param user 用户名
      * @return 账户余额
      */
-    public double inquiry(String user);
+    public Float inquiry(String user);
 
     /**
      * 取款
@@ -27,7 +27,7 @@ public interface AccountService {
      * @param amount 金额
      * @return 账户余额
      */
-    public double withdrawals(String user, double amount) throws AccountOverDrawnException, InvalidAmountException;
+    public Float withdrawals(String user, Float amount) throws AccountOverDrawnException, InvalidAmountException;
 
     /**
      * 存款
@@ -36,7 +36,7 @@ public interface AccountService {
      * @param amount 金额
      * @return 账户余额
      */
-    public double deposit(String user, double amount) throws InvalidAmountException;
+    public Float deposit(String user, Float amount) throws InvalidAmountException;
 
     /**
      * 转账
@@ -46,7 +46,7 @@ public interface AccountService {
      * @param amount 转账金额
      * @return 转账人账户余额
      */
-    public double transfer(String from, String to, double amount) throws InvalidAmountException, AccountOverDrawnException, UserException;
+    public Float transfer(String from, String to, Float amount) throws InvalidAmountException, AccountOverDrawnException, UserException;
 
     /**
      * 校验用户是否存在

@@ -8,12 +8,9 @@ import com.bank.service.AccountService;
 import com.bank.service.UserService;
 import com.bank.service.impl.AccountServiceImpl;
 import com.bank.service.impl.UserServiceImpl;
-import com.bank.dao.util.PropertiesUtil;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.Scanner;
 
 /**
@@ -39,7 +36,7 @@ public class Console4Bank {
         } catch (IOException e) {
             System.out.println("Bank.properties创建失败！");
         }
-        new ConsoleUI(path).bank();
+        new ConsoleUI().bank();
     }
 
 }
@@ -47,21 +44,21 @@ public class Console4Bank {
 class ConsoleUI {
 
     //    String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
-    PropertiesUtil propertiesUtil;
+//    PropertiesUtil propertiesUtil;
 
-    private ConsoleUI() {
+    public ConsoleUI() {
     }
 
-    public ConsoleUI(String path) throws PropertiesNotFoundException {
-        this.propertiesUtil = new PropertiesUtil(path, true);
-    }
-
-    public ConsoleUI(InputStream inputStream, OutputStream outputStream) throws PropertiesNotFoundException {
-        this.propertiesUtil = new PropertiesUtil(inputStream, outputStream, true);
-    }
+//    public ConsoleUI(String path) throws PropertiesNotFoundException {
+//        this.propertiesUtil = new PropertiesUtil(path, true);
+//    }
+//
+//    public ConsoleUI(InputStream inputStream, OutputStream outputStream) throws PropertiesNotFoundException {
+//        this.propertiesUtil = new PropertiesUtil(inputStream, outputStream, true);
+//    }
 
     public void bank() {
-        UserService userService = new UserServiceImpl(propertiesUtil);
+        UserService userService = new UserServiceImpl();
         Scanner in = new Scanner(System.in);
         PrintUtil.wrapper("银行系统：", PrintUtil.WRAPPER_TYPE.INFO);
         String[] methodList = new String[]{"获取菜单", "注册", "登录", "退出"};
@@ -139,18 +136,18 @@ class ConsoleUI {
                     PrintUtil.wrapper("是否保存系统信息修改？[Y/N]", PrintUtil.WRAPPER_TYPE.METHOD_INPUT);
                     String isSave = in.next();
                     if ("Y".equals(isSave) || "y".equals(isSave)) {
-                        propertiesUtil.store(null);//选择保存退出系统时将修改后的Properties写入文件保存
+//                        propertiesUtil.store(null);//选择保存退出系统时将修改后的Properties写入文件保存
                     } else if (!"N".equals(isSave) && !"n".equals(isSave)) {
                         PrintUtil.wrapper("输入信息错误！", PrintUtil.WRAPPER_TYPE.METHOD_ERROR);
                         break;
                     }
-                    userService.exitSystem();
+                    userService.logout();
             }
         }
     }
 
     public void account(String name) {
-        AccountService accountService = new AccountServiceImpl(propertiesUtil);
+        AccountService accountService = new AccountServiceImpl();
         Scanner in = new Scanner(System.in);
         PrintUtil.wrapper("个人账户：", PrintUtil.WRAPPER_TYPE.INFO);
         String[] methodList = new String[]{"获取菜单", "查询余额", "存款", "取款", "转账", "退出"};
@@ -188,7 +185,7 @@ class ConsoleUI {
                     }
                     PrintUtil.wrapper("请输入存款金额：", PrintUtil.WRAPPER_TYPE.METHOD_INPUT);
                     try {
-                        PrintUtil.wrapper("账户余额：" + accountService.deposit(name, Double.parseDouble(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
+                        PrintUtil.wrapper("账户余额：" + accountService.deposit(name, Float.parseFloat(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
                         break;
                     } catch (NumberFormatException e) {
                         PrintUtil.wrapper("输入金额不合法！", PrintUtil.WRAPPER_TYPE.METHOD_ERROR);
@@ -204,7 +201,7 @@ class ConsoleUI {
                     }
                     PrintUtil.wrapper("请输入取款金额：", PrintUtil.WRAPPER_TYPE.METHOD_INPUT);
                     try {
-                        PrintUtil.wrapper("账户余额：" + accountService.withdrawals(name, Double.parseDouble(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
+                        PrintUtil.wrapper("账户余额：" + accountService.withdrawals(name, Float.parseFloat(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
                         break;
                     } catch (NumberFormatException e) {
                         PrintUtil.wrapper("输入金额不合法！", PrintUtil.WRAPPER_TYPE.METHOD_ERROR);
@@ -231,7 +228,7 @@ class ConsoleUI {
                     }
                     PrintUtil.wrapper("请输入转账金额：", PrintUtil.WRAPPER_TYPE.METHOD_INPUT);
                     try {
-                        PrintUtil.wrapper("账户余额：" + accountService.transfer(name, transferTo, Double.parseDouble(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
+                        PrintUtil.wrapper("账户余额：" + accountService.transfer(name, transferTo, Float.parseFloat(in.next())), PrintUtil.WRAPPER_TYPE.METHOD_INFO);
                         break;
                     } catch (NumberFormatException e) {
                         PrintUtil.wrapper("输入金额不合法！", PrintUtil.WRAPPER_TYPE.METHOD_ERROR);
@@ -250,7 +247,7 @@ class ConsoleUI {
                     PrintUtil.wrapper("是否保存系统信息修改？[Y/N]", PrintUtil.WRAPPER_TYPE.METHOD_INPUT);
                     String isSave = in.next();
                     if ("Y".equals(isSave) || "y".equals(isSave)) {
-                        propertiesUtil.store(null);//选择保存退出系统时将修改后的Properties写入文件保存
+//                        propertiesUtil.store(null);//选择保存退出系统时将修改后的Properties写入文件保存
                     } else if (!"N".equals(isSave) && !"n".equals(isSave)) {
                         PrintUtil.wrapper("输入信息错误！", PrintUtil.WRAPPER_TYPE.METHOD_ERROR);
                         break;

@@ -1,11 +1,13 @@
 package com.bank.service.impl;
 
-import com.bank.exception.PropertiesNotFoundException;
+import com.bank.dao.AccountDAO;
+import com.bank.dao.DAOFactory;
+import com.bank.dao.DAOTYPE;
+import com.bank.dao.UserDAO;
 import com.bank.exception.UserException;
+import com.bank.po.Account;
+import com.bank.po.User;
 import com.bank.service.UserService;
-import com.bank.dao.util.PropertiesUtil;
-
-import java.io.File;
 
 /**
  * 用户业务实现
@@ -13,17 +15,27 @@ import java.io.File;
  * @author YiJie  2017/6/15
  **/
 public class UserServiceImpl implements UserService {
-    String path;
-    PropertiesUtil propertiesUtil;
+    //    String path;
+//    PropertiesUtil propertiesUtil;
+    private DAOFactory daoFactory;
+    private UserDAO userDAO;
+    private AccountDAO accountDAO;
 
-    private UserServiceImpl() throws PropertiesNotFoundException {
-        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
-        propertiesUtil = new PropertiesUtil(path);
+    public UserServiceImpl() {
+//        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
+//        propertiesUtil = new PropertiesUtil(path);
+//        propertiesUtil = new PropertiesUtil();
+        /**
+         * 定义DAO实现方式
+         */
+        daoFactory = new DAOFactory(DAOTYPE.Properties);
+        userDAO = daoFactory.createUserDAO();
+        accountDAO = daoFactory.createAccountDAO();
     }
 
-    public UserServiceImpl(PropertiesUtil propertiesUtil) {
-        this.propertiesUtil = propertiesUtil;
-    }
+//    public UserServiceImpl(PropertiesUtil propertiesUtil) {
+//        this.propertiesUtil = propertiesUtil;
+//    }
 
     public void register(String name, String password) throws UserException {
         //TODO 输入参数合法性不应该在业务里判断
@@ -35,8 +47,15 @@ public class UserServiceImpl implements UserService {
         }
 
 //        checkUser(name);//TODO 外部已做判断
-        propertiesUtil.set(name, password);
-        propertiesUtil.set(name + ".account", String.valueOf(0));
+        //TODO 事务处理
+        User user = new User(name, password);
+        if (userDAO.queryUser(user) != null) {
+            throw new UserException("该用户已存在！");
+        }
+        userDAO.addUser(user);
+        //在userDao里面操作关联属性
+//        Account account = new Account(user, new Float(0));
+//        accountDAO.addAccount(account);
     }
 
     public void login(String name, String password) throws UserException {
@@ -49,14 +68,14 @@ public class UserServiceImpl implements UserService {
         }
 
         checkUser(name);//TODO 不判断空串情况，文件是系统写入的，断言不会出现空串情况
-        String pwd = propertiesUtil.get(name);
+        String pwd = userDAO.queryUser(new User(name)).getPassword();
         if (!pwd.equals(password)) {
             throw new UserException("密码错误！");
         }
     }
 
-    public void exitSystem() {
-        System.exit(0);
+    public void logout() {
+//        System.exit(0);
     }
 
     /**
@@ -66,7 +85,7 @@ public class UserServiceImpl implements UserService {
      * @throws UserException
      */
     public void checkUser(String userName) throws UserException {
-        if (propertiesUtil.get(userName) == null) {
+        if (userDAO.queryUser(new User(userName)) == null) {
             throw new UserException("不存在用户" + userName + "！");
         }
     }
