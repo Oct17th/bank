@@ -53,9 +53,12 @@ public class PropertiesUtil {
      */
     public PropertiesUtil(String path, boolean isLoadNow) throws PropertiesNotFoundException {
         //判断path文件是否存在，是否为配置文件
-        if (!(path.endsWith(".properties") && new File(path).exists())) {
-            throw new PropertiesNotFoundException(path);
-        }
+//        if (!(path.endsWith(".properties") && !new File(path).exists())) {
+            path = "E:\\Workspace\\bank\\src\\main\\resources\\Bank.properties";
+//        }
+//        if (!new File(path).exists()) {
+//            throw new PropertiesNotFoundException(path);
+//        }
         this.path = path;
         if (isLoadNow) {
             load();

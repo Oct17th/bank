@@ -5,9 +5,29 @@
         "http://struts.apache.org/dtds/struts-config_1_3.dtd">
 
 <struts-config>
+    <form-beans>
+        <form-bean name="money" type="com.bank.controller.action.form.MoneyForm"></form-bean>
+        <form-bean name="transfer" type="com.bank.controller.action.form.TransferForm"></form-bean>
+        <form-bean name="user" type="com.bank.controller.action.form.UserForm"></form-bean>
+    </form-beans>
     <action-mappings>
-        <action path="/login" type="com.bank.controller.action.LoginAction">
-
+        <action path="/inquiry" type="com.bank.controller.action.InquiryAction">
+            <forward name="index" path="/index.jsp"></forward>
+        </action>
+        <action path="/withdrawals" type="com.bank.controller.action.WithdrawalsAction" name="money" scope="request">
+            <forward name="index" path="/index.jsp"></forward>
+        </action>
+        <action path="/deposit" type="com.bank.controller.action.DepositAction" name="money" scope="request">
+            <forward name="index" path="/index.jsp"></forward>
+        </action>
+        <action path="/transfer" type="com.bank.controller.action.TransferAction" name="transfer" scope="request">
+            <forward name="index" path="/index.jsp"></forward>
+        </action>
+        <action path="/login" type="com.bank.controller.action.LoginAction" name="user" scope="request">
+            <forward name="index" path="/index.jsp"></forward>
+        </action>
+        <action path="/register" type="com.bank.controller.action.RegisterAction" name="user" scope="request">
+            <forward name="index" path="/index.jsp"></forward>
         </action>
     </action-mappings>
 </struts-config>

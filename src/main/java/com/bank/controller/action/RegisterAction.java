@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author YiJie 2017/8/30.
  */
-public class LoginAction extends Action {
+public class RegisterAction extends Action {
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         UserForm userForm = (UserForm) form;
         UserService userService = new UserServiceImpl();
-        userService.login(userForm.getName(), userForm.getPassword());
-        //TODO 输入判空，try-catch判断是否登录成功
-        request.getSession().setAttribute("user", userForm);
+        userService.register(userForm.getName(),userForm.getPassword());
+        //TODO 输入判空，try-catch判断是否注册成功
+        request.getSession().setAttribute("user",userForm);
         AccountService accountService = new AccountServiceImpl();
         request.setAttribute("account", accountService.inquiry(userForm.getName()));
         return mapping.findForward("index");
