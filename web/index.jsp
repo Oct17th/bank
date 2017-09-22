@@ -5,11 +5,11 @@
     <%@page pageEncoding="UTF-8" %>
     <title>银行</title>
 
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <%--<script src="js/jquerysession.js"></script>--%>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src='js/bootstrap.min.js'></script>
     <script src="js/jrj6out.js"></script>
+    <script src="js/submitform.js"></script>
     <script>try {
         Typekit.load({async: false});
     } catch (e) {
@@ -275,15 +275,13 @@
 
     <script src="js/prefixfree.min.js"></script>
     <script type="application/javascript">
-        $(document).ready(
-            function () {
-                //user为空时才会往下走
-                var user =<%=session.getAttribute("user")%>;
-                if (user==null) {
-                    document.getElementById('show-login').click();
-                }
-            })
-
+        $(document).ready(function () {
+            //user为空时才会往下走
+            var user =<%=session.getAttribute("name")%>;
+            if (user==null) {
+            $('#loginModal').modal('show');
+            }
+        })
     </script>
 </head>
 
@@ -298,9 +296,9 @@
     <div class="container container-fluid center-block">
         <div class="navbar-left">
             <ol class="breadcrumb">
-                <li><a href="#">首页</a></li>
-                <li class="active">
-                    ${sessionScope.user.name}
+                <li><a onclick="window.location.reload()">首页</a></li>
+                <li class="active" id="navbar-username">
+                    ${sessionScope.name}
                 </li>
             </ol>
         </div>
@@ -308,7 +306,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search">
             </div>
-            <div class="btn btn-default shift-camera-button">
+            <div class="btn btn-default shift-camera-button" onclick="logout()">
                 <div class="text">退出</div>
             </div>
         </form>
@@ -322,10 +320,10 @@
         <div class="jumbotron">
             <div class="container center-block">
                 <div class="row">
-                    <h1 class="pull-left">&nbsp;<font style="color: #63c4e6;">
-                        ${sessionScope.user.name}
+                    <h1 class="pull-left">&nbsp;<font style="color: #63c4e6;" id="welcome-username">
+                        ${sessionScope.name}
                     </font>&nbsp;
-                        <small>早上好！</small>
+                        <small id="sayhello"></small>
                     </h1>
                 </div>
 
@@ -338,7 +336,7 @@
                 </div>
                 <div class="row well">
                     <div class="col-sm-6">
-                        <h4 style="color: black">账户余额：${requestScope.account}</h4>
+                        <h4 style="color: black" id="balance">账户余额：${requestScope.account}</h4>
                     </div>
                     <div class="col-sm-2">
                         <a href="#deposit" data-toggle="tab" class="btn btn-info btn-block">
@@ -361,7 +359,7 @@
                 <div class="tab-content">
                     <div class="tab-pane fade " id="deposit">
                         <div class="row well">
-                            <form class="form-horizontal" role="form" action="deposit.do" method="post">
+                            <form class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" style="color: black">金额</label>
                                     <div class="col-sm-8">
@@ -371,14 +369,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-5 col-sm-2">
-                                        <div class="button" onclick="document.getElementById('deposit-submit').click()">
+                                        <div class="button" onclick="account(this)">
                                             <div class="border" style="background-color:#63c4e6;">
                                                 <div class="left-plane"></div>
                                                 <div class="right-plane"></div>
                                             </div>
                                             <div class="text">确认存款</div>
                                         </div>
-                                        <button type="submit" id="deposit-submit" style="display: none"></button>
                                     </div>
                                 </div>
                             </form>
@@ -386,7 +383,7 @@
                     </div>
                     <div class="tab-pane fade" id="withdrawals">
                         <div class="row well">
-                            <form class="form-horizontal" role="form" action="withdrawals.do" method="post">
+                            <form class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" style="color: black">金额</label>
                                     <div class="col-sm-8">
@@ -395,15 +392,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-5 col-sm-2">
-                                        <div class="button"
-                                             onclick="document.getElementById('withdrawals-submit').click()">
+                                        <div class="button" onclick="account(this)">
                                             <div class="border" style="background-color:#63c4e6;">
                                                 <div class="left-plane"></div>
                                                 <div class="right-plane"></div>
                                             </div>
                                             <div class="text">确认取款</div>
                                         </div>
-                                        <button type="submit" id="withdrawals-submit" style="display: none"></button>
                                     </div>
                                 </div>
                             </form>
@@ -411,7 +406,7 @@
                     </div>
                     <div class="tab-pane fade" id="transfer">
                         <div class="row well">
-                            <form class="form-horizontal" role="form" action="transfer.do" method="post">
+                            <form class="form-horizontal" role="form">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" style="color: black">转账人</label>
                                     <div class="col-sm-8">
@@ -426,15 +421,13 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-5 col-sm-2">
-                                        <div class="button"
-                                             onclick="document.getElementById('transfer-submit').click()">
+                                        <div class="button" onclick="account(this)">
                                             <div class="border" style="background-color:#63c4e6;">
                                                 <div class="left-plane"></div>
                                                 <div class="right-plane"></div>
                                             </div>
                                             <div class="text">确认转账</div>
                                         </div>
-                                        <button type="submit" id="transfer-submit" style="display: none"></button>
                                     </div>
                                 </div>
                             </form>
@@ -460,12 +453,12 @@
                 <div class="left-plane"></div>
                 <div class="right-plane"></div>
             </div>
-            -
-            <div class="text" data-toggle="modal" data-target="#loginModal" id="show-login">login</div>
+            <div class="text" data-toggle="modal" data-target="#loginModal">login</div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
@@ -505,7 +498,6 @@
                                             <input class="form-control" type="text" placeholder="文本输入" name="password">
                                         </div>
                                     </div>
-                                    <button type="submit" id="login-submit" style="display: none"></button>
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="register">
@@ -528,58 +520,24 @@
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label" style="color: black">确认密码</label>
                                         <div class="col-sm-4">
-                                            <input class="form-control" type="text" placeholder="文本输入">
+                                            <input class="form-control" type="text" placeholder="文本输入"
+                                                   name="checkPassword">
                                         </div>
                                     </div>
                                 </form>
-                                <button type="submit" id="register-submit" style="display: none"></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-info col-sm-offset-3 col-sm-2" onclick="a();
-
-//                function c() {
-//                    alert($('#pannel-header').activeElement);
-
-//                    var buttonID = window.location.host;
-//                    buttonID = buttonID+'-submit';
-//                  document.getElementById(buttonID).click()
-//                }
-">
+                <button type="button" class="btn btn-info col-sm-offset-5 col-sm-2" onclick="user();">
                     确定
-                </button>
-                <button type="button" class="btn btn-default col-sm-offset-2 col-sm-2"
-                        data-dismiss="modal">关闭
                 </button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<script>
-    $(function show() {
-        $('#loginModal').on('shown.bs.modal', function (e) {
-            // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
-            $(this).css('display', 'block');
-            var modalHeight = $(window).height() / 2 - $('#loginModalContent').height() / 2;
-            $(this).find('.modal-dialog').css({
-                'margin-top': modalHeight
-            });
-        });
-//        $('#loginModal').modal({
-//            keyboard: true
-//        })
-    });
-    function a() {
-        var href = $('#pannel-header li.active a').attr("href") + '-submit';
-        $(href).click();
-
-    }
-
-</script>
-<script src='js/jquery.min.js'></script>
 <script src='js/TweenMax.min.js'></script>
 <script src='js/three.min.js'></script>
 <script src="js/index.js"></script>

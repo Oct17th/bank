@@ -6,28 +6,25 @@
 
 <struts-config>
     <form-beans>
-        <form-bean name="money" type="com.bank.controller.action.form.MoneyForm"></form-bean>
-        <form-bean name="transfer" type="com.bank.controller.action.form.TransferForm"></form-bean>
-        <form-bean name="user" type="com.bank.controller.action.form.UserForm"></form-bean>
+        <form-bean name="money" type="com.bank.controller.struts1.form.MoneyForm"></form-bean>
+        <form-bean name="transfer" type="com.bank.controller.struts1.form.TransferForm"></form-bean>
+        <form-bean name="user" type="com.bank.controller.struts1.form.UserForm"></form-bean>
     </form-beans>
     <action-mappings>
-        <action path="/inquiry" type="com.bank.controller.action.InquiryAction">
+        <action path="/inquiry" type="com.bank.controller.struts1.action.InquiryAction">
             <forward name="index" path="/index.jsp"></forward>
         </action>
-        <action path="/withdrawals" type="com.bank.controller.action.WithdrawalsAction" name="money" scope="request">
-            <forward name="index" path="/index.jsp"></forward>
+        <action path="/withdrawals" type="com.bank.controller.struts1.action.WithdrawalsAction" name="money" scope="request">
         </action>
-        <action path="/deposit" type="com.bank.controller.action.DepositAction" name="money" scope="request">
-            <forward name="index" path="/index.jsp"></forward>
+        <action path="/deposit" type="com.bank.controller.struts1.action.DepositAction" name="money" scope="request">
         </action>
-        <action path="/transfer" type="com.bank.controller.action.TransferAction" name="transfer" scope="request">
-            <forward name="index" path="/index.jsp"></forward>
+        <action path="/transfer" type="com.bank.controller.struts1.action.TransferAction" name="transfer" scope="request">
         </action>
-        <action path="/login" type="com.bank.controller.action.LoginAction" name="user" scope="request">
-            <forward name="index" path="/index.jsp"></forward>
+        <action path="/login" type="com.bank.controller.struts1.action.LoginAction" name="user" scope="request">
         </action>
-        <action path="/register" type="com.bank.controller.action.RegisterAction" name="user" scope="request">
-            <forward name="index" path="/index.jsp"></forward>
+        <action path="/logout" type="com.bank.controller.struts1.action.LogoutAction" name="user" scope="request">
+        </action>
+        <action path="/register" type="com.bank.controller.struts1.action.RegisterAction" name="user" scope="request">
         </action>
     </action-mappings>
 </struts-config>

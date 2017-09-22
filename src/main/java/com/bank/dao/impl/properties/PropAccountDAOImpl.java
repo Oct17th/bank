@@ -1,7 +1,7 @@
 package com.bank.dao.impl.properties;
 
 import com.bank.dao.AccountDAO;
-import com.bank.dao.util.PropertiesUtil;
+import com.bank.dao.impl.properties.util.PropertiesUtil;
 import com.bank.exception.PropertiesNotFoundException;
 import com.bank.po.Account;
 import com.bank.po.User;
