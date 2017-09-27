@@ -3,6 +3,7 @@ package com.bank.controller.struts1.action;
 import com.bank.controller.struts1.form.UserForm;
 import com.bank.exception.UserException;
 import com.bank.service.AccountService;
+import com.bank.service.ServiceFactory;
 import com.bank.service.UserService;
 import com.bank.service.impl.AccountServiceImpl;
 import com.bank.service.impl.UserServiceImpl;
@@ -24,7 +25,7 @@ public class LoginAction extends Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException {
         UserForm userForm = (UserForm) form;
         String name = userForm.getName();
-        UserService userService = new UserServiceImpl();
+        UserService userService = ServiceFactory.getUserService();
         ServletOutputStream out = response.getOutputStream();
         try {
             userService.login(name, userForm.getPassword());
@@ -34,7 +35,7 @@ public class LoginAction extends Action {
         }
         //TODO 输入判空，try-catch判断是否登录成功
         request.getSession().setAttribute("name", name);
-        AccountService accountService = new AccountServiceImpl();
+        AccountService accountService = ServiceFactory.getAccountService();
         out.print(accountService.inquiry(name));
         return null;
     }

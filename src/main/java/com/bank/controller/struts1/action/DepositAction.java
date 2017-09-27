@@ -3,6 +3,7 @@ package com.bank.controller.struts1.action;
 import com.bank.controller.struts1.form.MoneyForm;
 import com.bank.exception.InvalidAmountException;
 import com.bank.service.AccountService;
+import com.bank.service.ServiceFactory;
 import com.bank.service.impl.AccountServiceImpl;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
@@ -26,7 +27,7 @@ public class DepositAction extends Action {
         HttpSession session = request.getSession();
         String name = (String) session.getAttribute("name");
         MoneyForm moneyForm = (MoneyForm) form;
-        AccountService accountService = new AccountServiceImpl();
+        AccountService accountService = ServiceFactory.getAccountService();
         Float account;
         ServletOutputStream out = response.getOutputStream();
         try {

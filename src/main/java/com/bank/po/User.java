@@ -15,7 +15,9 @@ public class User {
      */
     String password;
 
-    public User(){}
+    public User(){
+        super();
+    }
 
     public User(String name) {
         this.name = name;
@@ -51,5 +53,13 @@ public class User {
 
         if (getName() != null ? !getName().equals(user.getName()) : user.getName() != null) return false;
         return getPassword() != null ? getPassword().equals(user.getPassword()) : user.getPassword() == null;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }

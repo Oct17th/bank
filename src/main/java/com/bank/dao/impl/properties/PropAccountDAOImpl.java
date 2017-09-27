@@ -23,7 +23,7 @@ public class PropAccountDAOImpl implements AccountDAO {
     }
 
     public int addAccount(Account account) {
-        if (propertiesUtil.get(account.getName()) != null) {
+        if (propertiesUtil.get(account.getName() + ".account") != null) {
             return 0;
         }
         propertiesUtil.set(account.getName() + ".account", String.valueOf(account.getBalance()));

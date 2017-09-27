@@ -32,7 +32,7 @@ public class PropUserDAOImpl implements UserDAO {
             return 0;//该用户已存在
         }
         propertiesUtil.set(user.getName(), user.getPassword());
-        propertiesUtil.set(user.getName() + ".account", "0.0");//TODO 此操作不符合高内聚低耦合原则
+//        propertiesUtil.set(user.getName() + ".account", "0.0");//TODO 此操作不符合高内聚低耦合原则
         return 1;
     }
 

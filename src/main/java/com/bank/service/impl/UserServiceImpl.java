@@ -1,8 +1,6 @@
 package com.bank.service.impl;
 
 import com.bank.dao.AccountDAO;
-import com.bank.dao.DAOFactory;
-import com.bank.dao.DAOTYPE;
 import com.bank.dao.UserDAO;
 import com.bank.exception.UserException;
 import com.bank.po.Account;
@@ -15,27 +13,16 @@ import com.bank.service.UserService;
  * @author YiJie  2017/6/15
  **/
 public class UserServiceImpl implements UserService {
-    //    String path;
-//    PropertiesUtil propertiesUtil;
-    private DAOFactory daoFactory;
     private UserDAO userDAO;
     private AccountDAO accountDAO;
 
-    public UserServiceImpl() {
-//        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
-//        propertiesUtil = new PropertiesUtil(path);
-//        propertiesUtil = new PropertiesUtil();
-        /**
-         * 定义DAO实现方式
-         */
-        daoFactory = new DAOFactory(DAOTYPE.Properties);
-        userDAO = daoFactory.createUserDAO();
-        accountDAO = daoFactory.createAccountDAO();
+    public void setUserDAO(UserDAO userDAO) {
+        this.userDAO = userDAO;
     }
 
-//    public UserServiceImpl(PropertiesUtil propertiesUtil) {
-//        this.propertiesUtil = propertiesUtil;
-//    }
+    public void setAccountDAO(AccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
 
     public void register(String name, String password) throws UserException {
         //TODO 输入参数合法性不应该在业务里判断
@@ -54,8 +41,8 @@ public class UserServiceImpl implements UserService {
         }
         userDAO.addUser(user);
         //在userDao里面操作关联属性
-//        Account account = new Account(user, new Float(0));
-//        accountDAO.addAccount(account);
+        Account account = new Account(user, new Float(0));
+        accountDAO.addAccount(account);
     }
 
     public void login(String name, String password) throws UserException {

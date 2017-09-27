@@ -1,8 +1,7 @@
 package com.bank.service.impl;
 
 import com.bank.dao.AccountDAO;
-import com.bank.dao.DAOFactory;
-import com.bank.dao.DAOTYPE;
+import com.bank.dao.UserDAO;
 import com.bank.exception.AccountOverDrawnException;
 import com.bank.exception.InvalidAmountException;
 import com.bank.exception.UserException;
@@ -16,26 +15,16 @@ import com.bank.service.AccountService;
  * @author YiJie  2017/6/15
  **/
 public class AccountServiceImpl implements AccountService {
-    //    String path;
-//    PropertiesUtil propertiesUtil;
-    private DAOFactory daoFactory;
+    private UserDAO userDAO;
     private AccountDAO accountDAO;
 
-    public AccountServiceImpl() {
-//        path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "Bank.properties";
-//        propertiesUtil = new PropertiesUtil(path);
-//        propertiesUtil = new PropertiesUtil();
-
-        /**
-         * 定义DAO实现方式
-         */
-        daoFactory = new DAOFactory(DAOTYPE.Properties);
-        accountDAO = daoFactory.createAccountDAO();
+    public void setUserDAO(UserDAO userDAO) {
+        this.userDAO = userDAO;
     }
 
-//    public AccountServiceImpl(PropertiesUtil propertiesUtil) {
-//        this.propertiesUtil = propertiesUtil;
-//    }
+    public void setAccountDAO(AccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
 
     /**
      * 查询余额
@@ -124,7 +113,7 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public void checkUser(String userName) throws UserException {
-        if (daoFactory.createUserDAO().queryUser(new User(userName)) == null) {
+        if (userDAO.queryUser(new User(userName)) == null) {
             throw new UserException("不存在用户" + userName + "！");
         }
     }

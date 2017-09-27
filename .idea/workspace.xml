@@ -7,58 +7,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79e36a33-9d00-4c18-a0bc-257cfa9d5880" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LogoutAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/view/console/util/ConsoleUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/view/console/util/PrintUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/submitform.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/TransferAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/DepositAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/InquiryAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/LoginAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/RegisterAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/TransferAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/WithdrawalsAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/form/MoneyForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/form/TransferForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/action/form/UserForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/util/PropertiesUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/view/console/Console4Bank.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/view/console/ConsoleUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/view/console/PrintUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/view/console/PrintUtil$WRAPPER_TYPE.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/view/console/PrintUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.bank.service.AccountServiceTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.bank.service.AccountServiceTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/temp.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateAccountDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateUserDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisAccountDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bank/service/ServiceFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/Account.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/bank.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/daoimpl.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/DAOFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/DAOTYPE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/MySQLUserDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/DAOFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/DAOTYPE.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/mysql/MySQLAccountDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/mysql/MySQLUserDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bank/util/MD5Util.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/DepositAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/DepositAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/InquiryAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/InquiryAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/LoginAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/LoginAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/RegisterAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/RegisterAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/TransferAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/TransferAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/WithdrawalsAction.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/controller/struts1/action/WithdrawalsAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/properties/PropAccountDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/properties/PropAccountDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/properties/PropUserDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/dao/impl/properties/PropUserDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/po/Account.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/po/Account.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/po/User.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/po/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/service/impl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/service/impl/AccountServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bank/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bank/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bank.iml" afterPath="$PROJECT_DIR$/bank.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/po/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/po/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/po/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/po/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/service/impl/AccountServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/Bank.properties" afterPath="$PROJECT_DIR$/src/main/resources/Bank.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Bank.properties" afterPath="$PROJECT_DIR$/target/classes/Bank.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/DepositAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/InquiryAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/LoginAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/RegisterAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/WithdrawalsAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/form/MoneyForm.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/MoneyForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/form/TransferForm.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/TransferForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/controller/action/form/UserForm.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/UserForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/util/PropertiesUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/util/PropertiesUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/util/MD5Util.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/service/util/MD5Util.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/view/console/Console4Bank.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/view/console/Console.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/MySQLAccountDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisUserDAOImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,12 +70,67 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="bank" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="PropAccountDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bank.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Bank.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="daoimpl.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/daoimpl.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bank.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bank.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,6 +141,7 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Kotlin Class" />
+        <option value="Singleton" />
         <option value="Class" />
       </list>
     </option>
@@ -115,6 +169,10 @@
       <find>alert</find>
       <find>&quot;</find>
       <find>确认密码</find>
+      <find>hibernate-configuration-3.0.dtd</find>
+      <find>HibernateTransactionManager</find>
+      <find>spring</find>
+      <find>Service</find>
     </findStrings>
     <replaceStrings>
       <replace>│</replace>
@@ -136,57 +194,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/util/MD5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/web/js/three.min.js" />
-        <option value="$PROJECT_DIR$/web/js/index.js" />
-        <option value="$PROJECT_DIR$/web/bg.html" />
-        <option value="$PROJECT_DIR$/src/main/exam/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/exam/BallGame.java" />
-        <option value="$PROJECT_DIR$/src/main/exam/Main1.java" />
-        <option value="$PROJECT_DIR$/src/main/exam/Quarrel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/51card/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/card/MAIN.java" />
-        <option value="$PROJECT_DIR$/src/main/java/card/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/card/Main1.java" />
-        <option value="E:/GitHub/programming_demo/src/main/java/u51/Main1.java" />
-        <option value="E:/GitHub/programming_demo/src/main/java/u51/CountScore.java" />
-        <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/util/PropertiesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/LoginForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/RegisterForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/MoneyForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/TransferForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/UserForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/form/MoneyForm.java" />
-        <option value="$PROJECT_DIR$/web/js/jquerysession.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/form/UserForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/IndexAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/InquiryAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/RegisterAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/LoginAction.java" />
-        <option value="$PROJECT_DIR$/web/js/account.form.js" />
-        <option value="$PROJECT_DIR$/web/js/account.js" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/form/LogoutAction.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/RegisterAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/InquiryAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/WithdrawalsAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/LogoutAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/web/js/submitform.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/Bank.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/DepositAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/action/TransferAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/view/console/PrintUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/view/console/ConsoleUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bank/view/console/util/PrintUtil.java" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/User.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/Account.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/User.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/po/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/po/Account.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/struts-config.xml" />
+        <option value="$PROJECT_DIR$/target/classes/o.properties" />
+        <option value="$PROJECT_DIR$/target/classes/MessageResources_zh_CN.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-common.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-beans.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisHibernateAccountDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisAccountDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisUserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/application_commons.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext_commons.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext_beans" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_2.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/Account.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateAccountDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateUserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/service/impl/AccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/DAOFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/DAOSupport.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/service/ServiceFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Bank.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/daoimpl.xml" />
       </list>
     </option>
   </component>
@@ -253,24 +311,6 @@
           <option name="myItemId" value="bank" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Dependencies" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="junit:junit:4.12" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependencyNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="bank" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
@@ -320,7 +360,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,6 +421,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -406,6 +449,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,23 +580,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bank" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="properties" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20036764" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="SearchEverywhereHistoryKey" value="ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList&#10;HashMa&#9;PSI&#9;JAVA://java.util.HashMap&#10;HashMAP&#9;PSI&#9;JAVA://sun.rmi.server.UnicastServerRef.HashToMethod_Maps&#10;Ha&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/Hashtable.java&#10;Inte&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/lang/Integer.java&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;enum&#9;PSI&#9;JAVA://java.lang.Class#ENUM&#10;Math&#9;PSI&#9;JAVA://java.lang.Math&#10;AQ&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;Reen&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantLock&#10;File&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/File.java&#10;Exist&#9;PSI&#9;JAVA://java.io.File#exists&#10;Thread&#9;PSI&#9;JAVA://java.lang.Thread&#10;FileSys&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/FileSystem.java&#10;StreamDecoder&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class&#10;InputStreamRea&#9;PSI&#9;JAVA://java.io.InputStreamReader&#10;readLine&#9;PSI&#9;JAVA://java.io.BufferedReader#readLine&#10;StringBufferIn&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/StringBufferInputStream.java&#10;StringInput&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/jre/lib/rt.jar!/java/io/StringBufferInputStream.class&#10;ObjectIn&#9;PSI&#9;JAVA://java.io.ObjectInputStream&#10;Properties&#9;PSI&#9;JAVA://java.util.Properties&#10;Long&#9;PSI&#9;JAVA://java.lang.Long&#10;System&#9;PSI&#9;JAVA://java.lang.System" />
+    <property name="SearchEverywhereHistoryKey" value="antlr2.&#9;FILE&#9;file://E:/Workspace/bank/.idea/libraries/Maven__antlr_antlr_2_7_2.xml&#10;antlr&#9;FILE&#9;file://E:/Workspace/bank/.idea/libraries/Maven__antlr_antlr_2_7_2.xml&#10;hibernate-configuration&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/hibernate/hibernate-core/4.2.15.Final/hibernate-core-4.2.15.Final.jar!/org/hibernate/hibernate-configuration-4.0.xsd&#10;hibernate-configuration-3.0.dtd&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/hibernate/hibernate-core/4.2.15.Final/hibernate-core-4.2.15.Final.jar!/org/hibernate/hibernate-configuration-3.0.dtd&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList&#10;HashMa&#9;PSI&#9;JAVA://java.util.HashMap&#10;HashMAP&#9;PSI&#9;JAVA://sun.rmi.server.UnicastServerRef.HashToMethod_Maps&#10;Ha&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/Hashtable.java&#10;Inte&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/lang/Integer.java&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;enum&#9;PSI&#9;JAVA://java.lang.Class#ENUM&#10;Math&#9;PSI&#9;JAVA://java.lang.Math&#10;AQ&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java&#10;Reen&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReentrantLock&#10;File&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/File.java&#10;Exist&#9;PSI&#9;JAVA://java.io.File#exists&#10;Thread&#9;PSI&#9;JAVA://java.lang.Thread&#10;FileSys&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/FileSystem.java&#10;StreamDecoder&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/jre/lib/rt.jar!/sun/nio/cs/StreamDecoder.class&#10;InputStreamRea&#9;PSI&#9;JAVA://java.io.InputStreamReader&#10;readLine&#9;PSI&#9;JAVA://java.io.BufferedReader#readLine&#10;StringBufferIn&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/src.zip!/java/io/StringBufferInputStream.java&#10;StringInput&#9;FILE&#9;jar://D:/Program Files/Java/jdk1.7/jre/lib/rt.jar!/java/io/StringBufferInputStream.class&#10;ObjectIn&#9;PSI&#9;JAVA://java.io.ObjectInputStream&#10;Properties&#9;PSI&#9;JAVA://java.util.Properties&#10;Long&#9;PSI&#9;JAVA://java.lang.Long&#10;System&#9;PSI&#9;JAVA://java.lang.System" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_opened_file_path" value="E:/GitHub/algorithm_demo" />
+    <property name="last_opened_file_path" value="E:/User/Desktop/sshdemo" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -499,72 +645,32 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Workspace\bank\web" />
-      <recent name="E:\Workspace\bank\web\css" />
-      <recent name="E:\Workspace\bank\web\js" />
-      <recent name="E:\Workspace\bank\web\WEB-INF\js" />
-      <recent name="E:\Workspace\bank\web\WEB-INF" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bank" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bank.controller.action.form" />
-      <recent name="com.bank.controller.action.action" />
-      <recent name="com.bank.controller.action" />
-      <recent name="com.bank.dao.impl.properties" />
-      <recent name="com.bank.dao.impl" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Workspace\bank\src\main\resources" />
       <recent name="E:\Workspace\bank\src\main\java\com\bank\dao\impl\mysql" />
       <recent name="E:\Workspace\bank\src\main\java\com\bank\controller\action" />
       <recent name="E:\Workspace\bank\web" />
       <recent name="E:\Workspace\bank\web\WEB-INF" />
-      <recent name="E:\Workspace\bank\src\main\java\com\bank\service\impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bank.dao.impl.mysql.mybatis" />
+      <recent name="com.bank.controller.action.form" />
+      <recent name="com.bank.controller.action.action" />
+      <recent name="com.bank.controller.action" />
+      <recent name="com.bank.dao.impl.properties" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Workspace\bank\src\main\resources" />
+      <recent name="E:\Workspace\bank\src\main\java\com\bank" />
+      <recent name="E:\Workspace\bank\web" />
+      <recent name="E:\Workspace\bank\web\css" />
+      <recent name="E:\Workspace\bank\web\js" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Console">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="card.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="card.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bank" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.bank.dao.impl.properties.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.bank.service.util.MD5Util" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bank" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.HibernateAccountDAOImpl.testAdd">
     <configuration default="false" name="Console" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -585,24 +691,108 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="DAOFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="HibernateUserDAOImpl.addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.bank.dao.*" />
+          <option name="PATTERN" value="com.bank.dao.impl.mysql.hibernate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.bank.dao.DAOFactory" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="bank" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="com.bank.dao.impl.mysql.hibernate" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.dao.impl.mysql.hibernate.HibernateUserDAOImpl" />
+      <option name="METHOD_NAME" value="addUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bank" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HibernateUserDAOImpl.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.bank.dao.impl.mysql.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bank" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.bank.dao.impl.mysql.hibernate" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.dao.impl.mysql.hibernate.HibernateUserDAOImpl" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HibernateUserDAOImpl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.bank.dao.impl.mysql.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bank" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.bank.dao.impl.mysql.hibernate" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.dao.impl.mysql.hibernate.HibernateUserDAOImpl" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HibernateAccountDAOImpl.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.bank.dao.impl.mysql.hibernate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bank" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.bank.dao.impl.mysql.hibernate" />
+      <option name="MAIN_CLASS_NAME" value="com.bank.dao.impl.mysql.hibernate.HibernateAccountDAOImpl" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -798,6 +988,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1037,23 +1228,31 @@
         </option>
       </method>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat7" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MD5Util" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Console" />
-      <item index="4" class="java.lang.String" itemvalue="Application.DAOFactory" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Console" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl.addUser" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl.testAdd" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.HibernateAccountDAOImpl.testAdd" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.Console" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.DAOFactory" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HibernateAccountDAOImpl.testAdd" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl.testAdd" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HibernateUserDAOImpl.addUser" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Console" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpringBeansView">
+    <option name="showFiles" value="false" />
+    <option name="showImplicitBeans" value="false" />
+    <option name="showInfrastructureBeans" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1079,44 +1278,45 @@
       <workItem from="1506003284686" duration="476000" />
       <workItem from="1506003790639" duration="216000" />
       <workItem from="1506004040362" duration="7038000" />
-      <workItem from="1506012483598" duration="3209000" />
+      <workItem from="1506012483598" duration="18788000" />
+      <workItem from="1506253451696" duration="50892000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 32m 41s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 15m 32s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 32m 51s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 16m 14s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 36m 55s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 16m 39s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 37m 10s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 17m 00s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 39m 41s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 18m 29s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.17 at 14h 42m 51s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateAccountDAOImpl_testAdd - 2017.09.27 at 14h 18m 59s.xml">
+      <configuration name="HibernateAccountDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.18 at 07h 53m 05s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateUserDAOImpl_testAdd - 2017.09.27 at 13h 57m 28s.xml">
+      <configuration name="HibernateUserDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2017.06.18 at 07h 53m 40s.xml">
-      <configuration name="AccountServiceTest" configurationId="JUnit" />
+    <history-entry file="HibernateUserDAOImpl_testAdd - 2017.09.27 at 13h 57m 57s.xml">
+      <configuration name="HibernateUserDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_inquiry - 2017.06.18 at 00h 38m 28s.xml">
-      <configuration name="AccountServiceTest.inquiry" configurationId="JUnit" />
+    <history-entry file="HibernateUserDAOImpl_testAdd - 2017.09.27 at 13h 58m 12s.xml">
+      <configuration name="HibernateUserDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest_inquiry - 2017.06.23 at 15h 45m 47s.xml">
-      <configuration name="AccountServiceTest.inquiry" configurationId="JUnit" />
+    <history-entry file="HibernateUserDAOImpl_testAdd - 2017.09.27 at 14h 15m 23s.xml">
+      <configuration name="HibernateUserDAOImpl.testAdd" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="382390000" />
+    <option name="totallyTimeSpent" value="448861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1129,79 +1329,45 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3952435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39411098" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42808607" sideWeight="0.5064378" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40996602" sideWeight="0.2693133" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42808607" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405579" sideWeight="0.5386064" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2583784" sideWeight="0.4613936" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42808607" sideWeight="0.5064378" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4394111" sideWeight="0.2693133" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23175965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42808607" sideWeight="0.49356222" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19098713" sideWeight="0.49306932" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2306867" sideWeight="0.5069307" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19903433" sideWeight="0.46930692" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18486486" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18403548" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2387339" sideWeight="0.39646465" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53680634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2387339" sideWeight="0.39646465" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53680634" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42808607" sideWeight="0.5064378" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40996602" sideWeight="0.2693133" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Struts Assistant" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18486486" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53680634" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3952435" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42808607" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21297297" sideWeight="0.5386064" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2583784" sideWeight="0.4613936" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2387339" sideWeight="0.39646465" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1229,10 +1395,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="29" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1241,175 +1415,349 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/HashMap.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="123" column="25" lean-forward="false" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+        <state relative-caret-position="696">
+          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/s.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7/src.zip!/java/util/Hashtable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="121" column="19" lean-forward="false" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+    <entry file="uml://SpringLocalModels/module=bank">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>SpringLocalModels</ID>
+          <OriginalElement>module=bank</OriginalElement>
+          <nodes>
+            <node x="" y="">module=bank</node>
+            <node x="" y="">fileset=bank/Spring Application Context</node>
+            <node x="" y="">filePath=E:/Workspace/bank/src/main/resources/applicationContext.xml</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="327.5" y="12.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Show filesets as groups</Category>
+          </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.7/src.zip!/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1022" column="0" lean-forward="false" selection-start-line="1022" selection-start-column="0" selection-end-line="1022" selection-end-column="0" />
+        <state relative-caret-position="-332">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/51card/Main.kt" />
-    <entry file="file://E:/GitHub/programming_demo/src/main/java/u51/ThreeThreadStringMatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/GitHub/programming_demo/src/main/java/u51/CountScore.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-actions.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/AccountDAO.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-hibernate/1.2.7/spring-hibernate-1.2.7.jar!/org/springframework/orm/hibernate/support/HibernateDaoSupport.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="144">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/util/PropertiesUtil.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-hibernate/1.2.9/spring-hibernate-1.2.9.jar!/org/springframework/orm/hibernate3/LocalSessionFactoryBean.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+        <state relative-caret-position="301">
+          <caret line="115" column="27" lean-forward="false" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
+          <folding>
+            <element signature="e#4826#4827#0" expanded="true" />
+            <element signature="e#4895#4896#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-hibernate/1.2.9/spring-hibernate-1.2.9.jar!/org/springframework/orm/hibernate3/HibernateTransactionManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="48">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/action/LoginForm.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/UserForm.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/AllDefaultPossibilitiesBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="157">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/TransferForm.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/builders/SuiteMethodBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/MoneyForm.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-hibernate/1.2.7/spring-hibernate-1.2.7-sources.jar!/org/springframework/orm/hibernate/support/HibernateDaoSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="57" column="41" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/1.2.9/spring-beans-1.2.9.jar!/org/springframework/beans/factory/InitializingBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-dao/1.2.9/spring-dao-1.2.9.jar!/org/springframework/dao/support/DaoSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-hibernate/1.2.9/spring-hibernate-1.2.9.jar!/org/springframework/orm/hibernate3/support/HibernateDaoSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-common.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisUserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#295#296#0" expanded="false" />
+            <element signature="e#319#320#0" expanded="false" />
+            <element signature="e#383#384#0" expanded="false" />
+            <element signature="e#407#408#0" expanded="false" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#485#486#0" expanded="false" />
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#566#567#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/User.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        <state relative-caret-position="144">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/po/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" column="80" lean-forward="false" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+        <state relative-caret-position="85">
+          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+        <state relative-caret-position="121">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="76" column="26" lean-forward="true" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquerysession.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/action/action/IndexAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/net/sf/json-lib/json-lib/2.2.2/json-lib-2.2.2.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="72">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bank.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
+        <state relative-caret-position="-1843">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/TransferForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/mybatis/MyBatisAccountDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/UserForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="48">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext_beans">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext_commons.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="47" column="50" lean-forward="false" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Account.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="73" lean-forward="false" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateAccountDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/hibernate/HibernateUserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/DAOSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="37" column="74" lean-forward="false" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LogoutAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="32" column="74" lean-forward="false" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -1418,107 +1766,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/DepositAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="32" column="40" lean-forward="false" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/AccountService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/AccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/submitform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/TransferAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/form/MoneyForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="220">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/WithdrawalsAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="343">
+          <caret line="28" column="74" lean-forward="false" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LoginAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="146">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/InquiryAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/LogoutAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/ServiceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="19" column="130" lean-forward="false" selection-start-line="19" selection-start-column="130" selection-end-line="19" selection-end-column="130" />
+          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/po/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/temp.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/controller/struts1/action/RegisterAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="559">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropUserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1526,90 +1853,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/Bank.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/daoimpl.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="360">
+          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/view/console/util/ConsoleUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bank.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/view/console/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="40" lean-forward="true" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/view/console/util/PrintUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/struts-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts.diagram.DiagramEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/mysql/MySQLAccountDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/impl/properties/PropAccountDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/dao/DAOTYPE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bank/service/impl/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1630,6 +1890,7 @@
             <option name="proportions">
               <list>
                 <option value="0.20036764" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1637,11 +1898,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Struts (bank)|Struts</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20036764" />
               </list>
             </option>
           </splitter-proportions>
@@ -1697,11 +1958,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.hamcrest:hamcrest-core:1.3</last-edited>
+          <last-edited>Maven: antlr:antlr:2.7.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20036764" />
               </list>
             </option>
           </splitter-proportions>
@@ -1711,7 +1972,7 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
-    <option value="install" />
     <option value="clean" />
+    <option value="install" />
   </component>
 </project>

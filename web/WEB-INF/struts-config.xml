@@ -27,4 +27,5 @@
         <action path="/register" type="com.bank.controller.struts1.action.RegisterAction" name="user" scope="request">
         </action>
     </action-mappings>
+    <message-resources parameter="MessageResourse"/>
 </struts-config>

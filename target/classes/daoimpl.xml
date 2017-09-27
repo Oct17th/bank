@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置accountService-->
+    <bean id="accountService" class="com.bank.service.impl.AccountServiceImpl">
+        <property name="userDAO" ref="hibernateUserDAO"/>
+        <property name="accountDAO" ref="hibernateAccountDAO"/>
+    </bean>
+
+    <!--配置userService-->
+    <bean id="userService" class="com.bank.service.impl.UserServiceImpl">
+        <property name="userDAO" ref="hibernateUserDAO"/>
+        <property name="accountDAO" ref="hibernateAccountDAO"/>
+    </bean>
+
+    <!--AccountDao-->
+    <bean id="hibernateAccountDAO" class="com.bank.dao.impl.mysql.hibernate.HibernateAccountDAOImpl"/>
+    <bean id="propAccountDAO" class="com.bank.dao.impl.properties.PropAccountDAOImpl"/>
+
+
+    <!--UserDao-->
+    <bean id="hibernateUserDAO" class="com.bank.dao.impl.mysql.hibernate.HibernateUserDAOImpl"/>
+    <bean id="propUserDAO" class="com.bank.dao.impl.properties.PropUserDAOImpl"/>
+
+</beans>
