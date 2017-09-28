@@ -3,6 +3,7 @@
         "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <!--"org\hibernate\hibernate-configuration-3.0.dtd">-->
+<!--此文件只能放在根目录下-->
 <hibernate-configuration>
     <session-factory>
         <!-- jdbc连接 -->
@@ -24,7 +25,7 @@
         <property name="hibernate.format_sql">true</property>
 
         <!-- 注册映射文件 -->
-        <mapping resource="User.hbm.xml"/>
-        <mapping resource="Account.hbm.xml"/>
+        <mapping resource="hibernate/User.hbm.xml"/>
+        <mapping resource="hibernate/Account.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

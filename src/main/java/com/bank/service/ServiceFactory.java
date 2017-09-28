@@ -13,7 +13,7 @@ public class ServiceFactory {
     private static ApplicationContext ac;
 
     static {
-        ac = new ClassPathXmlApplicationContext("daoimpl.xml");
+        ac = new ClassPathXmlApplicationContext("applicationContext_dao.xml");
         userService = (UserService) ac.getBean("userService");
         accountService = (AccountService) ac.getBean("accountService");
     }

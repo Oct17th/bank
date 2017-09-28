@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bank.dao.AccountDAO">
+
+    <!--一对一级联-->
+    <resultMap type="com.bank.po.Account" id="account">
+        <id property="name" column="name"/>
+        <result property="balance" column="balance"/>
+        <association property="user" column="name" javaType="com.bank.po.User">
+            <id property="name" column="name"/>
+            <result property="password" column="password"/>
+        </association>
+    </resultMap>
+
+    <insert id="addAccount" parameterType="com.bank.po.Account">
+        INSERT INTO ACCOUNT(name ,balance) VALUES(#{name},#{balance});
+    </insert>
+    <update id="updateAccount">
+        UPDATE ACCOUNT SET balance = #{balance} WHERE name = #{user.name}
+    </update>
+    <delete id="deleteAccount" parameterType="com.bank.po.Account">
+        DELETE FROM ACCOUNT WHERE name = #{user.name};
+    </delete>
+    <select id="queryAccount" parameterType="com.bank.po.Account" resultMap="account">
+        SELECT USER.*,ACCOUNT.* FROM ACCOUNT,USER WHERE ACCOUNT.name = USER.name AND ACCOUNT.NAME = #{user.name};
+    </select>
+</mapper>

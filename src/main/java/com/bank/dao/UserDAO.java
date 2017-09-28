@@ -1,12 +1,14 @@
 package com.bank.dao;
 
 import com.bank.po.User;
+import org.springframework.stereotype.Repository;
 
 /**
  * UserDao接口
  *
  * @author YiJie 2017/9/4.
  */
+@Repository
 public interface UserDAO {
     /**
      * 添加用户数据

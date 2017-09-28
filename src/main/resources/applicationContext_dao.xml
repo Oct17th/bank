@@ -6,8 +6,8 @@
 
     <!--配置accountService-->
     <bean id="accountService" class="com.bank.service.impl.AccountServiceImpl">
-        <property name="userDAO" ref="hibernateUserDAO"/>
-        <property name="accountDAO" ref="hibernateAccountDAO"/>
+        <property name="userDAO" ref="mybatisUserDAO"/>
+        <property name="accountDAO" ref="mybatisAccountDAO"/>
     </bean>
 
     <!--配置userService-->
@@ -17,11 +17,13 @@
     </bean>
 
     <!--AccountDao-->
+    <bean id="mybatisAccountDAO" class="com.bank.dao.impl.mysql.mybatis.MyBatisAccountDAOImpl"/>
     <bean id="hibernateAccountDAO" class="com.bank.dao.impl.mysql.hibernate.HibernateAccountDAOImpl"/>
     <bean id="propAccountDAO" class="com.bank.dao.impl.properties.PropAccountDAOImpl"/>
 
 
     <!--UserDao-->
+    <bean id="mybatisUserDAO" class="com.bank.dao.impl.mysql.mybatis.MyBatisUserDAOImpl"/>
     <bean id="hibernateUserDAO" class="com.bank.dao.impl.mysql.hibernate.HibernateUserDAOImpl"/>
     <bean id="propUserDAO" class="com.bank.dao.impl.properties.PropUserDAOImpl"/>
 
