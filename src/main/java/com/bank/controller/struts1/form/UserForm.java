@@ -6,7 +6,9 @@ import org.apache.struts.action.ActionForm;
  * @author YiJie 2017/8/30.
  */
 public class UserForm extends ActionForm {
+
     private String name;
+
     private String password;
 
     public String getName() {
